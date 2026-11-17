@@ -1,247 +1,95 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>云下人：无限世界 | Coming Soon</title>
-    <meta name="description" content="《云下人：无限世界》是一个基于坐标系的无限像素世界。核心深耕种田养老，边缘缝合探险、贸易、自动化与社会模拟。在这里，你可以体验到极致缝合带来的无限玩法，与万千玩家共同定义这个世界。" />
-    <meta name="keywords" content="云下人, 种田养老, 无限地图, 玩法缝合, 沙盒游戏, 像素贸易, 自动化种田, 开放世界模拟, yxryxr, yxr" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
-
-        :root {
-            --bg-dark: #12121a;
-            --accent: #ffcc00;  
-            --pixel-border: #ffffff;
-            --text: #ffffff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            image-rendering: pixelated; 
-        }
-
-        body, html {
-            background-color: var(--bg-dark);
-            font-family: 'ZCOOL KuaiLe', 'Courier New', monospace;
-            color: var(--text);
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-
-        .pixel-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('bg.jpg'); 
-            background-size: cover;
-            background-position: center;
-            z-index: 1;
-        }
-
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6); 
-            z-index: 2;
-        }
-
-        .container {
-            position: relative;
-            z-index: 3;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* --- Coming Soon 标志 --- */
-        .coming-soon-badge {
-            background: #e74c3c;
-            color: white;
-            padding: 8px 16px;
-            font-size: 1.2rem;
-            border: 4px solid #fff;
-            box-shadow: 4px 4px 0px #000;
-            margin-bottom: 30px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); box-shadow: 6px 6px 0px #000; }
-            100% { transform: scale(1); }
-        }
-
-        .main-title {
-            font-size: 3.5rem;
-            color: var(--accent);
-            text-shadow: 6px 6px 0px #000;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .sub-slogan {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            color: #ccc;
-            text-shadow: 2px 2px 0px #000;
-            max-width: 700px;
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        /* --- 卡片区域 --- */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-bottom: 60px;
-            width: 100%;
-        }
-
-        .feature-card {
-            background: rgba(20, 20, 30, 0.85);
-            border: 4px solid var(--pixel-border);
-            padding: 30px 20px;
-            box-shadow: 8px 8px 0px 0px #000;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* 卡片右上角的“待解锁”小标签 */
-        .feature-card::after {
-            content: "LOCKED";
-            position: absolute;
-            top: 10px;
-            right: -30px;
-            background: #555;
-            font-size: 0.7rem;
-            padding: 2px 40px;
-            transform: rotate(45deg);
-        }
-
-        .pixel-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            display: block;
-            text-align: center;
-        }
-
-        .feature-card h3 {
-            color: var(--accent);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            text-align: center;
-        }
-
-        .feature-card p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: #bbb;
-        }
-
-        /* --- 交互区域 --- */
-        .action-area {
-            display: flex;
-            gap: 24px;
-            margin-bottom: 40px;
-        }
-
-        .btn {
-            background: #333;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border: 4px solid #fff;
-            box-shadow: 4px 4px 0px 0px #000;
-            transition: all 0.1s;
-        }
-
-        .btn:hover {
-            background-color: var(--accent);
-            color: #000;
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px 0px #000;
-        }
-
-        .dev-status {
-            font-size: 1rem;
-            color: #666;
-            letter-spacing: 2px;
-        }
-
-        /* --- 移动端适配 --- */
-        @media (max-width: 850px) {
-            .features-grid { grid-template-columns: 1fr; }
-            .main-title { font-size: 2.2rem; }
-            .container { padding: 40px 20px; }
-            .coming-soon-badge { font-size: 1rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云下人：无限世界 | YXR: Infinite World</title>
+  <meta name="description" content="《云下人：无限世界》——以种田与生活经营为根基。云境安居，云下探索；公开开发，长期创作。云上安身，云下争世。">
+  <meta name="keywords" content="云下人, 无限世界, 云境, 云下, 种田, 沙盒, 公开开发, YXR, yxryxr">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <div class="pixel-bg"></div>
-    <div class="overlay"></div>
-
-    <div class="container">
-        
-        <div class="coming-soon-badge">PROJECT: COMING SOON</div>
-
-        <h1 class="main-title">万顷云下，种田只是开始。</h1>
-        <p class="sub-slogan">
-            纯粹的养老底色，极致的玩法缝合<br>
-            万人同服的无边界大世界
-        </p>
-
-        <div class="features-grid">
-            <div class="feature-card">
-                <span class="pixel-icon">🌾</span>
-                <h3>纯粹种田养老</h3>
-                <p>没有战力焦虑，没有副本打卡。底层机制严格保护你的田园生活，任何人与战斗逻辑都无法打破这份宁静。</p>
-            </div>
-
-            <div class="feature-card">
-                <span class="pixel-icon">🤝</span>
-                <h3>万人地缘生态</h3>
-                <p>这不仅是一个人的农场。翻过山头是真实的邻居，跨越几千个坐标去贸易。这里只有玩家自发建立的社会。</p>
-            </div>
-
-            <div class="feature-card">
-                <span class="pixel-icon">🧩</span>
-                <h3>极致缝合玩法</h3>
-                <p>在种田底色之外，缝合了跨区贸易、自动化流水线、深层地核探索。你想怎么玩，世界就能缝合出什么可能。</p>
-            </div>
-        </div>
-
-        <div class="action-area">
-            <a href="#" class="btn">查看开发日志</a>
-            <a href="#" class="btn">加入社区等待</a>
-        </div>
-
-        <p class="dev-status">服务器构建中... 预计连接建立 [PENDING]</p>
+  <header class="hero">
+    <div class="hero__media" aria-hidden="true">
+      <img src="bg.jpg" alt="" width="1920" height="1080">
     </div>
+    <div class="hero__veil" aria-hidden="true"></div>
+    <div class="hero__clouds" aria-hidden="true"></div>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-51C7P6FVC7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <div class="hero__content">
+      <h1 class="brand">
+        云下人：无限世界
+        <span class="brand__en">YXR: Infinite World</span>
+      </h1>
+      <p class="headline">云上安身，云下争世。</p>
+      <p class="lede">一方云境，一片云下。种田是根；你可以选择自己的生活方式。</p>
+      <p class="byline">
+        开发者 ·
+        <a class="byline__link" href="https://yxrhub.com/" rel="noopener noreferrer" title="YxrHub · 云下人叶小睿的数字空间">叶小睿 / 云下人叶小睿</a>
+      </p>
+      <div class="cta">
+        <a class="btn btn--solid" href="https://github.com/yxrhub/yxrworld" rel="noopener noreferrer">代码仓库</a>
+        <a class="btn" href="https://space.bilibili.com/3493113916033463" rel="noopener noreferrer">开发日志</a>
+      </div>
+    </div>
+  </header>
 
-  gtag('config', 'G-51C7P6FVC7');
-</script>
+  <main>
+    <section class="section section--world" id="world" aria-labelledby="world-title">
+      <div class="section__inner">
+        <h2 class="section__title" id="world-title">云境与云下</h2>
+        <p class="section__intro">
+          两个互补的空间，同一款游戏。单人可以完整经营生活；多人是扩展，不是门槛。
+        </p>
+        <div class="split">
+          <div class="split__col">
+            <h3 class="split__label">云境</h3>
+            <p>你的私人天地：安居、种田、建设与经营。从一小块土地开始，亲手扩境成属于自己的地方。</p>
+            <p>宁静与积累保底在此——不依赖他人允许，也能把日子过下去。</p>
+          </div>
+          <div class="split__col split__col--below">
+            <h3 class="split__label">云下</h3>
+            <p>共同参与的开放世界：探索、贸易、合作，也可能遇见竞争与未知。</p>
+            <p>价值不在「怪更多」，而在「这里有别人，也有未知」。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--open" id="open" aria-labelledby="open-title">
+      <div class="section__inner">
+        <h2 class="section__title" id="open-title">公开开发</h2>
+        <p class="quote">我不知道这个游戏最后会变成什么，但我想一直做下去。</p>
+        <div class="open-copy">
+          <p>这是一个由个人发起、AI 辅助、朝开源协作演进的长期创作。不急着证明商业成功，而是持续把世界做出来、公开过程、留下可玩的痕迹。</p>
+          <p>不等它准备好才公开——在它不断变好的过程中公开。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <nav class="site-footer__links" aria-label="站外链接">
+        <a href="https://github.com/yxrhub/yxrworld" rel="noopener noreferrer">GitHub</a>
+        <a href="https://space.bilibili.com/3493113916033463" rel="noopener noreferrer">Bilibili</a>
+        <a href="https://yxrhub.com/" rel="noopener noreferrer" title="叶小睿的数字空间">YxrHub</a>
+      </nav>
+      <p class="site-footer__note">© 云下人：无限世界 · 叶小睿 · yxryxr.com</p>
+    </div>
+  </footer>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-51C7P6FVC7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-51C7P6FVC7');
+  </script>
 </body>
 </html>
