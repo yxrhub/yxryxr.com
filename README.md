@@ -16,6 +16,7 @@ npx --yes serve dist
 
 | 用途 | URL |
 |------|-----|
+| 网页版试玩（开发测试版，可能有 bug） | https://world.yxr.app/ |
 | 代码仓库 | https://github.com/yxrhub/yxrworld |
 | 开发日志（Bilibili） | https://space.bilibili.com/3493113916033463 |
 | YxrHub（叶小睿的数字空间） | https://yxrhub.com/ |

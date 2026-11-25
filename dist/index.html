@@ -13,6 +13,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="notice" role="note">
+    <p class="notice__text">
+      <span class="notice__dot" aria-hidden="true"></span>
+      <strong>网页版已开放试玩</strong>
+      <span class="notice__sep" aria-hidden="true">·</span>
+      <span class="notice__warn">开发测试版，可能会有 bug</span>
+    </p>
+    <a class="notice__link" href="https://world.yxr.app/" rel="noopener noreferrer">进入游戏 →</a>
+  </div>
+
   <header class="hero">
     <div class="hero__media" aria-hidden="true">
       <img src="bg.jpg" alt="" width="1920" height="1080">
@@ -32,7 +42,11 @@
         <a class="byline__link" href="https://yxrhub.com/" rel="noopener noreferrer" title="YxrHub · 云下人叶小睿的数字空间">叶小睿 / 云下人叶小睿</a>
       </p>
       <div class="cta">
-        <a class="btn btn--solid" href="https://github.com/yxrhub/yxrworld" rel="noopener noreferrer">代码仓库</a>
+        <a class="btn btn--play" href="https://world.yxr.app/" rel="noopener noreferrer" title="网页版 · 开发测试版">
+          <span class="btn__badge">开发测试版</span>
+          <span class="btn__label">立即游玩 · 网页版</span>
+        </a>
+        <a class="btn" href="https://github.com/yxrhub/yxrworld" rel="noopener noreferrer">代码仓库</a>
         <a class="btn" href="https://space.bilibili.com/3493113916033463" rel="noopener noreferrer">开发日志</a>
       </div>
     </div>
@@ -60,6 +74,27 @@
       </div>
     </section>
 
+    <section class="section section--play" id="play" aria-labelledby="play-title">
+      <div class="section__inner">
+        <div class="play-card">
+          <p class="play-card__eyebrow">网页版 · 免安装 · 浏览器直接打开</p>
+          <h2 class="play-card__title" id="play-title">现在就来云下走一走</h2>
+          <p class="play-card__text">
+            不用下载，点开就能玩。世界还在生长，欢迎走进去看看它现在的样子。
+          </p>
+          <a class="btn-play" href="https://world.yxr.app/" rel="noopener noreferrer">
+            <span class="btn-play__icon" aria-hidden="true">▶</span>
+            <span class="btn-play__label">立即游玩</span>
+          </a>
+          <p class="play-card__url">world.yxr.app</p>
+          <p class="play-card__warn">
+            <span class="play-card__warn-tag">开发测试版</span>
+            内容、存档与玩法仍在调整，可能会有 bug——遇到问题属于正常，欢迎反馈。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section class="section section--open" id="open" aria-labelledby="open-title">
       <div class="section__inner">
         <h2 class="section__title" id="open-title">公开开发</h2>
@@ -75,6 +110,7 @@
   <footer class="site-footer">
     <div class="site-footer__inner">
       <nav class="site-footer__links" aria-label="站外链接">
+        <a class="site-footer__play" href="https://world.yxr.app/" rel="noopener noreferrer">网页版试玩 →</a>
         <a href="https://github.com/yxrhub/yxrworld" rel="noopener noreferrer">GitHub</a>
         <a href="https://space.bilibili.com/3493113916033463" rel="noopener noreferrer">Bilibili</a>
         <a href="https://yxrhub.com/" rel="noopener noreferrer" title="叶小睿的数字空间">YxrHub</a>
